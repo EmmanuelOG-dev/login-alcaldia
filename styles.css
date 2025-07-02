@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FBFBFB;
+}
+
+/* inicio de estilos para pagina de login en pantallas pequeñas */
+
+/* contenedor de formulario centrado */
+.form-container {
+    width: 100%;
+    max-width: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    text-align: center;
+    color: #CAD1D7;
+}
+
+.form-container h2:last-of-type {
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 29px;
+}
+
+/* campos de formulario para inicio de sesion */
+.form-group input {
+    height: 47px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #F7F7F7;
+    border-radius: 0px 5px 5px 0px;
+    border-left: #000000 5px solid;
+}
+
+.form-group input::placeholder {
+    color: #CACACA;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* opciones de inicio de sesion */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 29px;
+    font-size: 11px;
+}
+
+.remember {
+    display: flex;
+    gap: 5px;
+    color: #CAD1D7;
+}
+
+.register {
+    text-decoration: none;
+    color: #000000;
+}
+
+.register:hover {
+    text-decoration: underline;
+}
+
+.form-options a {
+    color: #000000;
+}
+
+/* boton de inscripcion */
+.form-group button {
+    width: 100%;
+    height: 51px;
+    padding: 10px;
+    background-color: #FBFBFB;
+    color: #CAD1D7;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #f3f3f3;
+}
+
+/* oculta la imagen que se muestra en pantallas grandes para mostrar solo el formulario de login */
+.left {
+    display: none;
+}
+/* fin de estilos para pagina de login en pantallas pequeñas */
+
+/* inicio de estilos para pagina de inicio en pantallas pequeñas */
+.body {
+    padding: 13px;
+    height: 100vh;
+    letter-spacing: 1px;
+}
+
+.logo-container {
+    margin-bottom: 12px;
+}
+
+.logo {
+    height: 71px;
+}
+
+/* barra de navegacion */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    height: 50px;
+    margin-bottom: 41px;
+}
+
+/* boton de inicio/menu */
+.menu {
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #000000;
+    padding: 10px 8px;
+    height: 47px;
+    background-color: #F7F7F7;
+}
+
+.menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* botones agrupados en la barra de menu */
+.menu-group {
+    display: flex;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 50px;
+    margin: auto;
+}
+
+.menu-btn {
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn.cerrar {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* contenedor de tarjetas en columna */
+.card-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-container p {
+    color: #CACACA;
+}
+
+.card {
+    margin-bottom: 15px;
+    height: 136px;
+    width: 233px;
+    padding: 27px 10px;
+    border: 0px solid #000000;
+    border-radius: 10px 10px 10px 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #F7F7F7;
+}
+
+.card img {
+    height: 80px;
+    float: right;
+}
+/* fin de estilos para pagina de inicio en pantallas pequeñas */
+
+/* inicio de estilos para pagina de login en pantallas grandes */
+@media (min-width: 768px) {
+
+    /* contenedor con flex para dividir la pantalla en dos */
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* contenedor de la mitad izquierda de la pantalla que muestra imagen de fondo y logo */
+    .left {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        background: url('img/login.png') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* contenedor de la mitad derecha de la pantalla que muestra el formulario de inicio de sesion */
+    .right {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* logo centrado en el contenedor izquierdo */
+    .logo-login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        max-width: 350px;
+        min-width: 80px;
+    }
+    /* fin de estilos para pagina de login en pantallas grandes */
+
+    /* inicio de estilos para pagina de inicio en pantallas grandes */
+    
+    /* extension de boton de inicio/menu */
+    .menu {
+        width: 143px;
+        justify-content: center;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    /* contenedor de tarjetas en fila para aprovechar el ancho de la pantalla */
+    .card-container {
+        justify-content: flex-end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 27px;
+    }
+}
+/* fin de estilos para pagina de inicio en pantallas grandes */
